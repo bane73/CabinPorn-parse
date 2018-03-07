@@ -35,9 +35,8 @@
 # sudo kill <pid>
 
 case "$1" in
-  start)
-		cd /home/cabox/workspace
-		nohup java -jar target/cabinporn-parse.jar 'loop=true' 'sleepTimeMs=60000' 'pageDepthToSearch=5' 'searchWords=Brandon, Gresham, Norm, Dawn, Smith, Montana, Fortine, Lincoln, 1985' >> ~/ops/cabinporn-parse.log &
+  start)		
+		nohup java -jar ~/ops/cabinporn-parse.jar 'loop=true' 'sleepTimeMs=60000' 'pageDepthToSearch=5' 'searchWords=Brandon, Gresham, Norm, Dawn, Smith, Montana, Fortine, Lincoln, 1985' >> ~/ops/cabinporn-parse.log &
 		;;
   stop)
 		;;
